@@ -9,6 +9,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victormedeiros95/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://local-personal-projects.web.app/132iaWrzuJb6TeCAQKTV0d3UGiS2)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VMedeiros)
+[![CV](https://img.shields.io/badge/CV-FF5722?style=for-the-badge&logo=readthedocs&logoColor=white)](https://victor-medeiros-cv.web.app/)
 
 </div>
 
