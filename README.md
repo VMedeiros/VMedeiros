@@ -2,9 +2,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F0F11&height=200&section=header&text=Victor%20Medeiros&fontSize=42&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38" width="100%" />
 
-### Frontend Tech Lead · Senior Consultant · Angular & Ionic Specialist
+### Frontend Tech Lead & Senior Consultant · 9+ Years · Angular & Ionic Specialist
 
-**9+ years** building enterprise platforms · **Clients:** Qodeture, Thomson Reuters, Accenture, C6 Bank, Stefanini · **Trilingual** (PT · EN · ES)
+**9+ years** building enterprise platforms · **Clients:** Qodeture, Thomson Reuters, Accenture / C6 Bank · **Trilingual** (PT · EN · ES)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victormedeiros95/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://local-personal-projects.web.app/portfolio)
@@ -20,11 +20,11 @@
 <tr>
 <td width="60%">
 
-**Frontend Tech Lead** and **Senior Consultant** with **9+ years** building enterprise-grade web and mobile applications.
+**Frontend Tech Lead** and **Senior Consultant** with **9+ years of experience** delivering enterprise-grade web and mobile applications.
 
-I specialize in **Angular** and **Ionic** ecosystems, delivering international-scale platforms for clients like **Qodeture** (CRM), **Thomson Reuters** (LegalTech), **Accenture / C6 Bank** (FinTech), and **Stefanini** (Digital Transformation).
+Specialized in **Angular** and **Ionic** ecosystems, with deep expertise in Clean Architecture, Design Systems, internationalization, and UI/UX. Proven track record leading multicultural teams and architecting platforms for global clients including **Qodeture** (CRM), **Thomson Reuters** (LegalTech), **Accenture / C6 Bank** (FinTech), and **Stefanini** (Digital Transformation).
 
-My role goes beyond code — I design architectures, create design systems, define coding standards, mentor developers, and lead multicultural teams to ship with consistency and quality.
+Trilingual professional (Portuguese, English, Spanish) experienced in technical leadership, mentoring, and delivering scalable solutions with automated quality enforcement.
 
 </td>
 <td width="40%">
@@ -49,16 +49,18 @@ const victor = {
 
 > _"Good architecture is what allows the team to ship fast without compromising quality."_
 
+**Currently at Ilegra** — Leading frontend consulting for enterprise clients, driving architectural decisions, design system creation, and team mentoring in multicultural environments.
+
 ---
 
 ## 🏢 Career Path
 
-| Period             | Company            | Role                                | Key Client / Domain                                       |
-| ------------------ | ------------------ | ----------------------------------- | --------------------------------------------------------- |
-| **2021 — Present** | **Ilegra**         | Frontend Consultant & Tech Lead     | Qodeture · Thomson Reuters · LegalTech · Design Systems · i18n |
-| **2021**           | **Icon Solutions** | Frontend Architect & Consultant     | Accenture / C6 Bank · FinTech · White-label Platforms     |
-| **2017 — 2024**    | **Stefanini Labs** | Frontend Specialist & Sr. Developer | Digital Transformation · Architecture · Training          |
-| **2017**           | **LTI Unifacisa**  | Frontend Developer (Web & Mobile)   | Regional Clients · Mobile Apps · Firebase                 |
+| Period                  | Company                   | Role                                   | Key Client / Domain                                            |
+| ----------------------- | ------------------------- | -------------------------------------- | -------------------------------------------------------------- |
+| **Oct 2021 — Present**  | **Ilegra**                | Frontend Consultant & Technical Leader | Qodeture · Thomson Reuters · LegalTech · Design Systems · i18n |
+| **Apr 2021 — Oct 2021** | **Icon Solutions Brasil** | Frontend Architect & Consultant        | Accenture / C6 Bank · FinTech · White-label Platforms          |
+| **Oct 2017 — Feb 2024** | **Stefanini Labs**        | Frontend Specialist & Senior Developer | Digital Transformation · Architecture · Training               |
+| **Mar 2017 — Oct 2017** | **LTI Unifacisa**         | Frontend Developer — Web & Mobile      | Regional Clients · Mobile Apps · Firebase                      |
 
 ---
 
@@ -92,6 +94,7 @@ const victor = {
 ![DDD](https://img.shields.io/badge/Domain--Driven_Design-FF6F00?style=for-the-badge&logo=databricks&logoColor=white)
 ![CQRS](https://img.shields.io/badge/CQRS-7B1FA2?style=for-the-badge&logo=diagramsdotnet&logoColor=white)
 ![Micro Frontends](https://img.shields.io/badge/Micro_Frontends-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Hexagonal](https://img.shields.io/badge/Hexagonal_Architecture-1B5E20?style=for-the-badge&logo=hexo&logoColor=white)
 ![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)
 ![Design Tokens](https://img.shields.io/badge/Design_Tokens-1A1A1A?style=for-the-badge&logo=designernews&logoColor=white)
 
@@ -150,11 +153,12 @@ Patterns that scale alongside the team and product complexity:
 
 **What I Practice**
 
-• Clean Architecture · DDD · CQRS
+• Clean Architecture · DDD · CQRS · Hexagonal · SOLID
 • Reactive Programming — RxJS, Signals
 • Design Systems — Tokens, Themes, Accessibility
 • Micro Frontends — Module Federation, Nx
 • Offline-First — PWA, IndexedDB, Service Workers
+• Internationalization (i18n · l10n)
 
 </td>
 <td width="50%">
@@ -177,12 +181,36 @@ Patterns that scale alongside the team and product complexity:
 
 ### Krutch — Enterprise CRM Platform · Qodeture
 
-Enterprise CRM built with Angular, Clean Architecture, DDD, and CQRS.
+Enterprise CRM built with **Angular 19**, **Clean Architecture**, **DDD**, and **CQRS**.
 
-• Clean Architecture with strict layered separation · Standalone components with lazy loading
-• Design token system (Light / Dark / High-Contrast) · Full i18n (EN, ES, PT-BR)
-• Offline-first PWA · JWT authentication with guards & interceptors · Dockerized with Nginx
-• Firebase + AWS S3/CloudFront · CI/CD with GitHub Actions · SonarQube quality gates
+<table>
+<tr>
+<td width="50%">
+
+**Architecture & Frontend**
+
+• Clean Architecture with strict layered separation
+• Standalone components with lazy loading
+• Design token system (Light / Dark / High-Contrast)
+• Full internationalization (EN, ES, PT-BR)
+• Offline-first PWA with IndexedDB & Service Workers
+• JWT authentication with guards & interceptors
+
+</td>
+<td width="50%">
+
+**Quality & Infrastructure**
+
+• Automated quality gates (ESLint, SonarQube, custom linters)
+• 85%+ test coverage (Jasmine, Karma)
+• CI/CD pipelines (GitHub Actions, Husky, lint-staged)
+• Dockerized with Nginx
+• Firebase + AWS S3/CloudFront
+• Pre-commit enforcement & conventional commits
+
+</td>
+</tr>
+</table>
 
 ---
 
