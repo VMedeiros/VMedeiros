@@ -207,13 +207,18 @@ Full-scale CRM serving **multiple enterprise clients** across **3 languages** (E
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=highcontrast&hide_border=true&bg_color=0D1117&count_private=true" />
 <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=VMedeiros&theme=highcontrast&hide_border=true&background=0D1117&locale=pt_BR" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake.svg" />
   <img alt="Snake animation" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake-dark.svg" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress.svg" />
+  <img alt="Contribution progress" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress-dark.svg" />
 </picture>
 
 </div>
