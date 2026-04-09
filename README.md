@@ -207,9 +207,7 @@ Full-scale CRM serving **multiple enterprise clients** across **3 languages** (E
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=VMedeiros&theme=darkhub&no-bg=true&no-frame=true&column=7&margin-w=10" width="100%" />
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=highcontrast&hide_border=true&bg_color=0D1117&count_private=true&cache_seconds=86400" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=highcontrast&hide_border=true&bg_color=0D1117&count_private=true" />
 <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=VMedeiros&theme=highcontrast&hide_border=true&background=0D1117&locale=pt_BR" />
 
 <picture>
