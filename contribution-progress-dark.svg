@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="40" viewBox="0 0 540 40">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0e4429"/>
+      <stop offset="40%" style="stop-color:#006d32"/>
+      <stop offset="70%" style="stop-color:#26a641"/>
+      <stop offset="100%" style="stop-color:#39d353"/>
+    </linearGradient>
+    <clipPath id="bar-clip">
+      <rect x="10" y="8" width="110" height="24" rx="12"/>
+    </clipPath>
+  </defs>
+  <rect x="10" y="8" width="480" height="24" rx="12" fill="#161b22"/>
+  <rect x="10" y="8" width="480" height="24" rx="12" fill="url(#grad)" clip-path="url(#bar-clip)"/>
+  <text x="500" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-weight="bold" font-size="14" fill="#39d353">23%</text>
+  <text x="65" y="25" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.9">86/369 days · 1093 contributions</text>
+</svg>
