@@ -1,10 +1,132 @@
+<h1 align="center">José Victor Medeiros Leitão</h1>
+
+<p align="center">
+  <strong>Frontend Tech Lead & Senior Consultant · 9+ Years · Angular & Ionic Specialist</strong>
+</p>
+
+<p align="center">
+  <a href="https://linkedin.com/in/victormedeiros95"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://victor-medeiros-cv.web.app/"><img src="https://img.shields.io/badge/CV-Online-2563eb?style=flat&logo=googlechrome&logoColor=white" alt="CV" /></a>
+  <a href="mailto:victor.leitao95@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+---
+
+## About Me
+
+Frontend Tech Lead with **9+ years** driving consulting engagements for enterprise clients — from architecture definition to production delivery. Specialized in **Angular** and **Ionic**, I architect scalable Design Systems, enforce quality through automated pipelines, and lead distributed teams across 3 languages (EN/PT/ES).
+
+Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** — reducing defects with i18n-focused improvements, accelerating release cycles from monthly to weekly, and building frontend foundations that outlast individual engagements.
+
+---
+
+## Key Achievements
+
+- 🏗️ Architected **Krutch CRM** from scratch — serving users across multiple countries
+- 🐛 Reduced production defects at **Thomson Reuters** with internationalization-focused improvements
+- 🎨 Built **Design Token system** adopted by other squads, reducing UI inconsistencies by 60%
+- 🚀 Decreased release cycle from **monthly to weekly** via CI/CD automation
+- 👥 Mentored **12+ developers**, with several promoted to senior in a short period
+- 🌐 Delivered **trilingual platforms** (EN/ES/PT) for 3 enterprise clients in CRM, LegalTech & FinTech
+
+---
+
+## Tech Stack
+
+<table>
+  <tr>
+    <td><strong>Frontend</strong></td>
+    <td>Angular · Ionic · Capacitor · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
+  </tr>
+  <tr>
+    <td><strong>Component Libraries</strong></td>
+    <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize</td>
+  </tr>
+  <tr>
+    <td><strong>Architecture</strong></td>
+    <td>Clean Architecture · DDD · CQRS · Hexagonal · Micro Frontends · Design Tokens · PWA</td>
+  </tr>
+  <tr>
+    <td><strong>Testing & Quality</strong></td>
+    <td>Jest · Jasmine · Karma · ESLint · SonarQube · Automated Quality Gates</td>
+  </tr>
+  <tr>
+    <td><strong>APIs & Data</strong></td>
+    <td>GraphQL · REST APIs · Firebase / Firestore · IndexedDB (Dexie) · Google Maps / Places</td>
+  </tr>
+  <tr>
+    <td><strong>Cloud & DevOps</strong></td>
+    <td>Firebase · AWS (S3, CloudFront) · Docker · Nginx · GitHub Actions · GitLab CI · Azure DevOps</td>
+  </tr>
+  <tr>
+    <td><strong>Tools</strong></td>
+    <td>Git · Nx · Jira · Confluence · Figma · Storybook · Postman · NodeRed · TFS</td>
+  </tr>
+  <tr>
+    <td><strong>Methodologies</strong></td>
+    <td>Agile · Scrum · Code Review Culture · Conventional Commits · ADRs · Docs as Code</td>
+  </tr>
+</table>
+
+---
+
+## Experience Timeline
+
+| Period              | Role                                   | Company                                 |
+| ------------------- | -------------------------------------- | --------------------------------------- |
+| Oct 2021 — Present  | Frontend Consultant & Technical Leader | **Ilegra** (Remote)                     |
+| Apr 2021 — Oct 2021 | Frontend Architect & Consultant        | **Icon Solutions Brasil** (Remote)      |
+| Oct 2017 — Mar 2021 | Senior Frontend Developer & Specialist | **Stefanini Labs** (Campina Grande, PB) |
+| Mar 2017 — Oct 2017 | Frontend Developer — Web & Mobile      | **LTI Unifacisa** (Campina Grande, PB)  |
+
+---
+
+## Contribution Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-snake.svg" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress.svg" />
+  <img alt="Contribution progress" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress.svg" />
+</picture>
+
+---
+
+## Languages
+
+| 🇧🇷 Portuguese | 🇺🇸 English | 🇪🇸 Spanish |
+| :-----------: | :--------: | :--------: |
+|    Native     |  Advanced  |  Advanced  |
+
+---
+
+## Education
+
+- **Post-Graduation** — Mobile Device Development · Unifacisa (2018)
+- **Bachelor's Degree** — Information Systems · Unifacisa (2017)
+
+---
+
+<p align="center">
+  <a href="https://victor-medeiros-cv.web.app/">🔗 View Full Interactive CV</a>
+</p>
+
+---
+
+<details>
+<summary>⚙️ GitHub Actions Workflow (Snake + Contribution Bar)</summary>
+
+```yaml
 name: Generate Snake
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
@@ -31,7 +153,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Fetch contribution data from GitHub API
           YEAR=$(date +%Y)
           QUERY='query { user(login: "VMedeiros") { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { contributionCount date } } } } } }'
           RESPONSE=$(gh api graphql -f query="$QUERY")
@@ -43,7 +164,6 @@ jobs:
           PCT=$((DAYS_WITH * 100 / TOTAL_DAYS))
           BAR_WIDTH=$((PCT * 480 / 100))
 
-          # Dark version
           cat > dist/contribution-progress-dark.svg << SVGEOF
           <svg xmlns="http://www.w3.org/2000/svg" width="540" height="40" viewBox="0 0 540 40">
             <defs>
@@ -64,7 +184,6 @@ jobs:
           </svg>
           SVGEOF
 
-          # Light version
           cat > dist/contribution-progress.svg << SVGEOF
           <svg xmlns="http://www.w3.org/2000/svg" width="540" height="40" viewBox="0 0 540 40">
             <defs>
@@ -92,3 +211,6 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+</details>
