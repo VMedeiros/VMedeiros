@@ -16,6 +16,8 @@
 
 Frontend Tech Lead with **9+ years** driving consulting engagements for enterprise clients — from architecture definition to production delivery. Specialized in **Angular** and **Ionic**, I architect scalable Design Systems, enforce quality through automated pipelines, and lead distributed teams across 3 languages (EN/PT/ES).
 
+Passionate about **AI-powered development workflows** — leveraging AI Agents (GitHub Copilot, AI-assisted code review, prompt engineering) to accelerate delivery, improve code quality, and boost team productivity.
+
 Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** — reducing defects with i18n-focused improvements, accelerating release cycles from monthly to weekly, and building frontend foundations that outlast individual engagements.
 
 ---
@@ -28,6 +30,7 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 - 🚀 Decreased release cycle from **monthly to weekly** via CI/CD automation
 - 👥 Mentored **12+ developers**, with several promoted to senior in a short period
 - 🌐 Delivered **trilingual platforms** (EN/ES/PT) for 3 enterprise clients in CRM, LegalTech & FinTech
+- 🤖 Integrated **AI Agents & GitHub Copilot** into team workflows, boosting productivity by +30%
 
 ---
 
@@ -49,6 +52,10 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
   <tr>
     <td><strong>Testing & Quality</strong></td>
     <td>Jest · Jasmine · Karma · ESLint · SonarQube · Automated Quality Gates</td>
+  </tr>
+  <tr>
+    <td><strong>AI & Productivity</strong></td>
+    <td>GitHub Copilot · AI Agents · Prompt Engineering · AI-Assisted Code Review · Generative AI Workflows</td>
   </tr>
   <tr>
     <td><strong>APIs & Data</strong></td>
@@ -101,7 +108,7 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 
 | 🇧🇷 Portuguese | 🇺🇸 English | 🇪🇸 Spanish |
 | :-----------: | :--------: | :--------: |
-|    Native     |  Advanced  |  Advanced  |
+|    Native     |   Fluent   |   Fluent   |
 
 ---
 
@@ -109,6 +116,17 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 
 - **Post-Graduation** — Mobile Device Development · Unifacisa (2018)
 - **Bachelor's Degree** — Information Systems · Unifacisa (2017)
+
+---
+
+## Certifications & Continuous Learning
+
+- Angular Signals In Depth (Angular 19) – Angular University
+- RxJS In Practice – Angular University
+- Reactive Angular Course (Angular 16) – Angular University
+- Angular Advanced MasterClass – Angular University
+- ChatGPT Masterclass – Udemy
+- AI-Powered Development & Prompt Engineering – Continuous Training
 
 ---
 
