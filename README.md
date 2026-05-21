@@ -127,16 +127,8 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 ## 📊 GitHub Stats
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true" />
-    <img height="160" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=github_dark&hide_border=true&langs_count=6" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=default&hide_border=true&langs_count=6" />
-    <img height="160" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=github_dark&hide_border=true&langs_count=6" />
-  </picture>
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=github_dark&hide_border=true&langs_count=6" alt="Top Languages" />
 </div>
 
 ---
