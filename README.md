@@ -126,10 +126,11 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=github_dark&hide_border=true&langs_count=6" alt="Top Languages" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-stats.svg" />
+  <img alt="GitHub Stats" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/github-stats-dark.svg" />
+</picture>
 
 ---
 
@@ -248,6 +249,61 @@ jobs:
             <rect x="10" y="8" width="480" height="24" rx="12" fill="url(#grad)" clip-path="url(#bar-clip)"/>
             <text x="500" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-weight="bold" font-size="14" fill="#216e39">${PCT}%</text>
             <text x="$((10 + BAR_WIDTH / 2))" y="25" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.9">${DAYS_WITH}/${TOTAL_DAYS} days · ${TOTAL} contributions</text>
+          </svg>
+          SVGEOF
+
+      - name: Generate GitHub Stats card
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          YEAR=$(date +%Y)
+          QUERY='query { user(login: "VMedeiros") { repositories(first: 100, ownerAffiliations: OWNER) { totalCount nodes { stargazerCount } } followers { totalCount } contributionsCollection { totalCommitContributions totalPullRequestContributions } } }'
+          DATA=$(gh api graphql -f query="$QUERY")
+
+          STARS=$(echo "$DATA" | jq '[.data.user.repositories.nodes[].stargazerCount] | add // 0')
+          COMMITS=$(echo "$DATA" | jq '.data.user.contributionsCollection.totalCommitContributions')
+          PRS=$(echo "$DATA" | jq '.data.user.contributionsCollection.totalPullRequestContributions')
+          REPOS=$(echo "$DATA" | jq '.data.user.repositories.totalCount')
+
+          cat > dist/github-stats-dark.svg << SVGEOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
+            <rect width="540" height="120" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+            <text x="25" y="28" font-family="'Segoe UI',system-ui,sans-serif" font-weight="600" font-size="16" fill="#e6edf3">VMedeiros' GitHub Stats</text>
+            <line x1="25" y1="38" x2="515" y2="38" stroke="#21262d" stroke-width="1"/>
+            <text x="68" y="64" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Stars</text>
+            <text x="68" y="96" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#58a6ff" text-anchor="middle">${STARS}</text>
+            <line x1="135" y1="45" x2="135" y2="108" stroke="#21262d" stroke-width="1"/>
+            <text x="203" y="60" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Commits</text>
+            <text x="203" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(${YEAR})</text>
+            <text x="203" y="101" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#58a6ff" text-anchor="middle">${COMMITS}</text>
+            <line x1="270" y1="45" x2="270" y2="108" stroke="#21262d" stroke-width="1"/>
+            <text x="338" y="60" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Pull Requests</text>
+            <text x="338" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(${YEAR})</text>
+            <text x="338" y="101" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#58a6ff" text-anchor="middle">${PRS}</text>
+            <line x1="405" y1="45" x2="405" y2="108" stroke="#21262d" stroke-width="1"/>
+            <text x="473" y="64" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Public Repos</text>
+            <text x="473" y="96" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#58a6ff" text-anchor="middle">${REPOS}</text>
+          </svg>
+          SVGEOF
+
+          cat > dist/github-stats.svg << SVGEOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
+            <rect width="540" height="120" rx="6" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+            <text x="25" y="28" font-family="'Segoe UI',system-ui,sans-serif" font-weight="600" font-size="16" fill="#1f2328">VMedeiros' GitHub Stats</text>
+            <line x1="25" y1="38" x2="515" y2="38" stroke="#d8dee4" stroke-width="1"/>
+            <text x="68" y="64" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#656d76" text-anchor="middle">Stars</text>
+            <text x="68" y="96" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#0969da" text-anchor="middle">${STARS}</text>
+            <line x1="135" y1="45" x2="135" y2="108" stroke="#d8dee4" stroke-width="1"/>
+            <text x="203" y="60" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#656d76" text-anchor="middle">Commits</text>
+            <text x="203" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#656d76" text-anchor="middle">(${YEAR})</text>
+            <text x="203" y="101" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#0969da" text-anchor="middle">${COMMITS}</text>
+            <line x1="270" y1="45" x2="270" y2="108" stroke="#d8dee4" stroke-width="1"/>
+            <text x="338" y="60" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#656d76" text-anchor="middle">Pull Requests</text>
+            <text x="338" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#656d76" text-anchor="middle">(${YEAR})</text>
+            <text x="338" y="101" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#0969da" text-anchor="middle">${PRS}</text>
+            <line x1="405" y1="45" x2="405" y2="108" stroke="#d8dee4" stroke-width="1"/>
+            <text x="473" y="64" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#656d76" text-anchor="middle">Public Repos</text>
+            <text x="473" y="96" font-family="'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="22" fill="#0969da" text-anchor="middle">${REPOS}</text>
           </svg>
           SVGEOF
 
