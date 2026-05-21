@@ -18,14 +18,22 @@ Frontend Tech Lead with **9+ years** driving consulting engagements for enterpri
 
 Passionate about **AI-powered development workflows** — leveraging AI Agents (GitHub Copilot, AI-assisted code review, prompt engineering) to accelerate delivery, improve code quality, and boost team productivity.
 
-Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** — reducing defects with i18n-focused improvements, accelerating release cycles from monthly to weekly, and building frontend foundations that outlast individual engagements.
+Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** — boosting frontend performance through architectural improvements, accelerating release cycles from monthly to weekly, and building scalable foundations that outlast individual engagements.
+
+---
+
+## 🔭 Currently
+
+- 🏗️ **Building:** Enterprise Angular applications as Frontend Tech Lead at **Ilegra**
+- 📚 **Deep-diving:** Angular 19 Signals, Zoneless architecture & NgRx Signal Store
+- 🤖 **Exploring:** AI Agents for frontend workflows — automated code review, test generation and refactoring pipelines
 
 ---
 
 ## Key Achievements
 
-- 🏗️ Architected **Krutch CRM** from scratch — serving users across multiple countries
-- 🐛 Reduced production defects at **Thomson Reuters** with internationalization-focused improvements
+- 🏗️ Architected **Krutch CRM** from scratch — 500+ users across 4 countries (BR/AR/MX/US), 10K+ daily syncs with offline-first PWA
+- ⚡ Improved **Thomson Reuters** frontend performance — migrated to OnPush CD strategy, reducing render cycles by ~70% and boosting responsiveness on high-volume legal document lists
 - 🎨 Built **Design Token system** adopted by other squads, reducing UI inconsistencies by 60%
 - 🚀 Decreased release cycle from **monthly to weekly** via CI/CD automation
 - 👥 Mentored **12+ developers**, with several promoted to senior in a short period
@@ -42,16 +50,20 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
     <td>Angular · Ionic · Capacitor · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
   </tr>
   <tr>
+    <td><strong>State Management</strong></td>
+    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · RxJS BehaviorSubject</td>
+  </tr>
+  <tr>
     <td><strong>Component Libraries</strong></td>
     <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize</td>
   </tr>
   <tr>
     <td><strong>Architecture</strong></td>
-    <td>Clean Architecture · DDD · CQRS · Hexagonal · Micro Frontends · Design Tokens · PWA</td>
+    <td>Clean Architecture · DDD · CQRS · Hexagonal · Micro Frontends · Design Tokens · PWA · Offline-First · i18n / l10n</td>
   </tr>
   <tr>
     <td><strong>Testing & Quality</strong></td>
-    <td>Jest · Jasmine · Karma · ESLint · SonarQube · Automated Quality Gates</td>
+    <td>Jest · Jasmine · Karma · Cypress · Playwright · ESLint · SonarQube · Automated Quality Gates</td>
   </tr>
   <tr>
     <td><strong>AI & Productivity</strong></td>
@@ -67,7 +79,7 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
   </tr>
   <tr>
     <td><strong>Tools</strong></td>
-    <td>Git · Nx · Jira · Confluence · Figma · Storybook · Postman · NodeRed · TFS</td>
+    <td>Git · Nx · Jira · Confluence · Figma · Storybook · Postman · TFS</td>
   </tr>
   <tr>
     <td><strong>Methodologies</strong></td>
@@ -88,6 +100,14 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 
 ---
 
+## 🌟 Featured Projects
+
+| Project                                                   | Description                                                                                                   | Stack                                     |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [**Interactive CV**](https://victor-medeiros-cv.web.app/) | Trilingual (EN/PT/ES) portfolio — dark mode, font controls, PDF/DOC export, PWA, offline support, JSON-LD SEO | Angular 19 · TypeScript · Firebase · i18n |
+
+---
+
 ## Contribution Activity
 
 <picture>
@@ -101,6 +121,17 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress.svg" />
   <img alt="Contribution progress" src="https://raw.githubusercontent.com/VMedeiros/VMedeiros/output/contribution-progress.svg" />
 </picture>
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true#gh-dark-mode-only" height="160" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=VMedeiros&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true#gh-light-mode-only" height="160" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=github_dark&hide_border=true&langs_count=6#gh-dark-mode-only" height="160" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VMedeiros&layout=compact&theme=default&hide_border=true&langs_count=6#gh-light-mode-only" height="160" alt="Top Languages" />
+</p>
 
 ---
 
