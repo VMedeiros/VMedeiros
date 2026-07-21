@@ -1,7 +1,7 @@
 <h1 align="center">José Victor Medeiros Leitão</h1>
 
 <p align="center">
-  <strong>Frontend Tech Lead & Senior Consultant · 9+ Years · Angular & Ionic Specialist</strong>
+  <strong>Frontend Tech Lead & Senior Consultant · 9+ Years · Angular & Ionic Specialist · React · Node.js</strong>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 ## About Me
 
-Frontend Tech Lead with **9+ years** driving consulting engagements for enterprise clients — from architecture definition to production delivery. Specialized in **Angular** and **Ionic**, I architect scalable Design Systems, enforce quality through automated pipelines, and lead distributed teams across 3 languages (EN/PT/ES).
+Frontend Tech Lead with **9+ years** driving consulting engagements for enterprise clients — from architecture definition to production delivery. Specialized in **Angular** and **Ionic**, with hands-on experience in **React** and **Node.js**, I architect scalable Design Systems, enforce quality through automated pipelines, and lead distributed teams across 3 languages (EN/PT/ES).
 
 Passionate about **AI-powered development workflows** — leveraging AI Agents (GitHub Copilot, AI-assisted code review, prompt engineering) to accelerate delivery, improve code quality, and boost team productivity.
 
@@ -47,15 +47,19 @@ Proven results for **Thomson Reuters**, **Accenture/C6 Bank**, and **Qodeture** 
 <table>
   <tr>
     <td><strong>Frontend</strong></td>
-    <td>Angular · Ionic · Capacitor · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
+    <td>Angular · Ionic · Capacitor · React · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
+  </tr>
+  <tr>
+    <td><strong>Backend</strong></td>
+    <td>Node.js · REST APIs</td>
   </tr>
   <tr>
     <td><strong>State Management</strong></td>
-    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · RxJS BehaviorSubject</td>
+    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · RxJS BehaviorSubject · React Context / Hooks</td>
   </tr>
   <tr>
     <td><strong>Component Libraries</strong></td>
-    <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize</td>
+    <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize · React ecosystem (Hooks, component patterns)</td>
   </tr>
   <tr>
     <td><strong>Architecture</strong></td>
