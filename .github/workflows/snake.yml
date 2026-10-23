@@ -12,81 +12,132 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_USER: VMedeiros
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Generate Snake Game
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         with:
-          github_user_name: VMedeiros
+          github_user_name: ${{ env.GITHUB_USER }}
           outputs: |
             dist/github-snake.svg?color_snake=#39d353&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
             dist/github-snake-dark.svg?palette=github-dark&color_snake=#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
-      - name: Generate contribution progress bar
+      - name: Generate contribution bar and stats card
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Fetch contribution data from GitHub API
-          YEAR=$(date +%Y)
-          QUERY='query { user(login: "VMedeiros") { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { contributionCount date } } } } } }'
-          RESPONSE=$(gh api graphql -f query="$QUERY")
+          set -euo pipefail
+          mkdir -p dist
 
-          TOTAL=$(echo "$RESPONSE" | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
-          DAYS_WITH=$(echo "$RESPONSE" | jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | select(.contributionCount > 0)] | length')
-          TOTAL_DAYS=$(echo "$RESPONSE" | jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[]] | length')
+          # Everything below covers the current calendar year, from Jan 1 until today
+          YEAR=$(date -u +%Y)
+          TODAY=$(date -u +%Y-%m-%d)
+          FROM="${YEAR}-01-01T00:00:00Z"
+          TO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+          DATA=$(gh api graphql -f login="$GITHUB_USER" -f from="$FROM" -f to="$TO" -f query='
+            query($login: String!, $from: DateTime!, $to: DateTime!) {
+              user(login: $login) {
+                repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
+                  totalCount
+                  nodes { stargazerCount }
+                }
+                contributionsCollection(from: $from, to: $to) {
+                  totalCommitContributions
+                  totalPullRequestContributions
+                  contributionCalendar {
+                    totalContributions
+                    weeks { contributionDays { contributionCount date } }
+                  }
+                }
+              }
+            }')
+
+          q() { echo "$DATA" | jq -er --arg from "${YEAR}-01-01" --arg to "$TODAY" "$1"; }
+          DAYS='[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | select(.date >= $from and .date <= $to)]'
+
+          TOTAL=$(q '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+          DAYS_WITH=$(q "$DAYS | map(select(.contributionCount > 0)) | length")
+          TOTAL_DAYS=$(q "$DAYS | length")
+          STARS=$(q '[.data.user.repositories.nodes[].stargazerCount] | add // 0')
+          REPOS=$(q '.data.user.repositories.totalCount')
+          COMMITS=$(q '.data.user.contributionsCollection.totalCommitContributions')
+          PRS=$(q '.data.user.contributionsCollection.totalPullRequestContributions')
+
+          if [ "$TOTAL_DAYS" -le 0 ]; then
+            echo "::error::Contribution calendar came back empty"
+            exit 1
+          fi
 
           PCT=$((DAYS_WITH * 100 / TOTAL_DAYS))
           BAR_WIDTH=$((PCT * 480 / 100))
+          FONT="'Segoe UI',system-ui,sans-serif"
 
-          # Dark version
-          cat > dist/contribution-progress-dark.svg << SVGEOF
-          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="40" viewBox="0 0 540 40">
+          # render_bar <file> <track> <grad1> <grad2> <grad3> <grad4> <accent> <caption>
+          render_bar() {
+            cat > "$1" << SVGEOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="56" viewBox="0 0 540 56">
             <defs>
               <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#0e4429"/>
-                <stop offset="40%" style="stop-color:#006d32"/>
-                <stop offset="70%" style="stop-color:#26a641"/>
-                <stop offset="100%" style="stop-color:#39d353"/>
+                <stop offset="0%" stop-color="$3"/>
+                <stop offset="40%" stop-color="$4"/>
+                <stop offset="70%" stop-color="$5"/>
+                <stop offset="100%" stop-color="$6"/>
               </linearGradient>
               <clipPath id="bar-clip">
-                <rect x="10" y="8" width="${BAR_WIDTH}" height="24" rx="12"/>
+                <rect x="10" y="8" width="${BAR_WIDTH}" height="20" rx="10"/>
               </clipPath>
             </defs>
-            <rect x="10" y="8" width="480" height="24" rx="12" fill="#161b22"/>
-            <rect x="10" y="8" width="480" height="24" rx="12" fill="url(#grad)" clip-path="url(#bar-clip)"/>
-            <text x="500" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-weight="bold" font-size="14" fill="#39d353">${PCT}%</text>
-            <text x="$((10 + BAR_WIDTH / 2))" y="25" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.9">${DAYS_WITH}/${TOTAL_DAYS} days · ${TOTAL} contributions</text>
+            <rect x="10" y="8" width="480" height="20" rx="10" fill="$2"/>
+            <rect x="10" y="8" width="480" height="20" rx="10" fill="url(#grad)" clip-path="url(#bar-clip)"/>
+            <text x="500" y="24" font-family="${FONT}" font-weight="bold" font-size="14" fill="$7">${PCT}%</text>
+            <text x="10" y="47" font-family="${FONT}" font-size="12" fill="$8">${DAYS_WITH}/${TOTAL_DAYS} days with contributions in ${YEAR} · ${TOTAL} contributions</text>
           </svg>
           SVGEOF
+          }
 
-          # Light version
-          cat > dist/contribution-progress.svg << SVGEOF
-          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="40" viewBox="0 0 540 40">
-            <defs>
-              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#9be9a8"/>
-                <stop offset="40%" style="stop-color:#40c463"/>
-                <stop offset="70%" style="stop-color:#30a14e"/>
-                <stop offset="100%" style="stop-color:#216e39"/>
-              </linearGradient>
-              <clipPath id="bar-clip">
-                <rect x="10" y="8" width="${BAR_WIDTH}" height="24" rx="12"/>
-              </clipPath>
-            </defs>
-            <rect x="10" y="8" width="480" height="24" rx="12" fill="#ebedf0"/>
-            <rect x="10" y="8" width="480" height="24" rx="12" fill="url(#grad)" clip-path="url(#bar-clip)"/>
-            <text x="500" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-weight="bold" font-size="14" fill="#216e39">${PCT}%</text>
-            <text x="$((10 + BAR_WIDTH / 2))" y="25" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.9">${DAYS_WITH}/${TOTAL_DAYS} days · ${TOTAL} contributions</text>
+          # render_stats <file> <background> <border> <title> <divider> <label> <value>
+          render_stats() {
+            cat > "$1" << SVGEOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120">
+            <rect x="0.5" y="0.5" width="539" height="119" rx="6" fill="$2" stroke="$3" stroke-width="1"/>
+            <text x="25" y="28" font-family="${FONT}" font-weight="600" font-size="16" fill="$4">${GITHUB_USER}' GitHub Stats</text>
+            <line x1="25" y1="38" x2="515" y2="38" stroke="$5" stroke-width="1"/>
+            <text x="68" y="64" font-family="${FONT}" font-size="11" fill="$6" text-anchor="middle">Stars</text>
+            <text x="68" y="96" font-family="${FONT}" font-weight="700" font-size="22" fill="$7" text-anchor="middle">${STARS}</text>
+            <line x1="135" y1="45" x2="135" y2="108" stroke="$5" stroke-width="1"/>
+            <text x="203" y="60" font-family="${FONT}" font-size="11" fill="$6" text-anchor="middle">Commits</text>
+            <text x="203" y="72" font-family="${FONT}" font-size="10" fill="$6" text-anchor="middle">(${YEAR})</text>
+            <text x="203" y="101" font-family="${FONT}" font-weight="700" font-size="22" fill="$7" text-anchor="middle">${COMMITS}</text>
+            <line x1="270" y1="45" x2="270" y2="108" stroke="$5" stroke-width="1"/>
+            <text x="338" y="60" font-family="${FONT}" font-size="11" fill="$6" text-anchor="middle">Pull Requests</text>
+            <text x="338" y="72" font-family="${FONT}" font-size="10" fill="$6" text-anchor="middle">(${YEAR})</text>
+            <text x="338" y="101" font-family="${FONT}" font-weight="700" font-size="22" fill="$7" text-anchor="middle">${PRS}</text>
+            <line x1="405" y1="45" x2="405" y2="108" stroke="$5" stroke-width="1"/>
+            <text x="473" y="64" font-family="${FONT}" font-size="11" fill="$6" text-anchor="middle">Public Repos</text>
+            <text x="473" y="96" font-family="${FONT}" font-weight="700" font-size="22" fill="$7" text-anchor="middle">${REPOS}</text>
           </svg>
           SVGEOF
+          }
+
+          render_bar dist/contribution-progress-dark.svg "#161b22" "#0e4429" "#006d32" "#26a641" "#39d353" "#39d353" "#8b949e"
+          render_bar dist/contribution-progress.svg "#ebedf0" "#9be9a8" "#40c463" "#30a14e" "#216e39" "#216e39" "#656d76"
+          render_stats dist/github-stats-dark.svg "#161b22" "#30363d" "#e6edf3" "#21262d" "#8b949e" "#58a6ff"
+          render_stats dist/github-stats.svg "#f6f8fa" "#d0d7de" "#1f2328" "#d8dee4" "#656d76" "#0969da"
+
+          ls -l dist
 
       - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
         with:
           target_branch: output
           build_dir: dist
