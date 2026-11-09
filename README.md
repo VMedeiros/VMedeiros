@@ -58,7 +58,7 @@ Frontend Tech Lead with **9+ years** of experience building enterprise web and m
   </tr>
   <tr>
     <td><strong>State Management</strong></td>
-    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · React Context / Hooks</td>
+    <td>NgRx · NgRx Signal Store · Akita · Redux · Angular Signals · React Context / Hooks</td>
   </tr>
   <tr>
     <td><strong>Component Libraries</strong></td>
