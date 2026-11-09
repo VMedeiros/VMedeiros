@@ -1,8 +1,17 @@
+<!--
+  The blocks marked cv:header, cv:about, cv:achievements, cv:stack,
+  cv:experience, cv:languages, cv:education and cv:certifications come from
+  the CV (https://victor-medeiros-cv.web.app) and are rewritten daily by
+  .github/workflows/cv-sync.yml. Edit the CV, not those blocks.
+-->
+
+<!-- cv:header -->
 <h1 align="center">José Victor Medeiros Leitão</h1>
 
 <p align="center">
-  <strong>Frontend Tech Lead & Senior Consultant · 9+ Years · Angular & Ionic Specialist · React · Node.js</strong>
+  <strong>Frontend Tech Lead &amp; Senior Consultant | 9+ Years | Angular, Ionic &amp; React Specialist</strong>
 </p>
+<!-- /cv:header -->
 
 <p align="center">
   <a href="https://linkedin.com/in/victormedeiros95"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -14,11 +23,9 @@
 
 ## About Me
 
-Frontend Tech Lead with **9+ years** of consulting for enterprise clients, taking projects from architecture definition all the way to production. I specialize in **Angular** and **Ionic**, also work with **React** and **Node.js**, and spend most of my time designing scalable Design Systems, keeping quality high through automated pipelines and leading distributed teams in English, Portuguese and Spanish.
-
-I'm also into **AI-powered development workflows**. I use AI Agents, GitHub Copilot, AI-assisted code review and prompt engineering to ship faster, improve code quality and help teams get more done.
-
-I've delivered for **Thomson Reuters**, **Accenture/C6 Bank** and **Qodeture**: faster frontends through architectural improvements, release cycles cut from monthly to weekly, and foundations that kept working long after the engagement ended.
+<!-- cv:about -->
+Frontend Tech Lead with **9+ years** of experience building enterprise web and mobile applications for consulting clients, from architecture to production. Specialized in **Angular** and **Ionic**, also working with **React** and **Node.js**. I build Design Systems, set up CI/CD and automated quality gates, and lead distributed teams in English, Spanish and Portuguese. I use **GitHub Copilot and AI agents** in daily work for code review, tests and refactoring. Clients include **Thomson Reuters**, **Accenture/C6 Bank** and **Qodeture**, where I cut production defects through i18n work and moved releases from monthly to weekly.
+<!-- /cv:about -->
 
 ---
 
@@ -32,83 +39,86 @@ I've delivered for **Thomson Reuters**, **Accenture/C6 Bank** and **Qodeture**: 
 
 ## Key Achievements
 
-- 🏗️ Architected **Krutch CRM** from scratch: 500+ users across 4 countries (BR/AR/MX/US) and 10K+ daily syncs with an offline-first PWA
-- ⚡ Improved **Thomson Reuters** frontend performance by migrating to OnPush change detection, cutting render cycles by ~70% on high-volume legal document lists
-- 🎨 Built a **Design Token system** adopted by other squads, reducing UI inconsistencies by 60%
-- 🚀 Moved the release cycle from **monthly to weekly** with CI/CD automation
-- 👥 Mentored **12+ developers**, several of whom were promoted to senior shortly after
-- 🌐 Delivered **trilingual platforms** (EN/ES/PT) for 3 enterprise clients in CRM, LegalTech & FinTech
-- 🤖 Brought **AI Agents & GitHub Copilot** into team workflows, raising productivity by about 30%
+<!-- cv:achievements -->
+- Reduced production defects at **Thomson Reuters** with improvements focused on internationalization
+- Built **Design Token system** adopted by other squads, reducing UI inconsistencies by 60%
+- Decreased release cycle from **monthly to weekly** via CI/CD automation
+- Mentored **12+ developers**, with several promoted to senior in a short period
+- Delivered **trilingual platforms** (EN/ES/PT) for 3 enterprise clients in CRM, LegalTech & FinTech
+- Brought **AI Agents & GitHub Copilot** into the team's workflow, raising productivity by about 30%
+<!-- /cv:achievements -->
 
 ---
 
 ## Tech Stack
 
+<!-- cv:stack -->
 <table>
   <tr>
     <td><strong>Frontend</strong></td>
     <td>Angular · Ionic · Capacitor · React · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
   </tr>
   <tr>
-    <td><strong>Backend</strong></td>
-    <td>Node.js · REST APIs</td>
-  </tr>
-  <tr>
     <td><strong>State Management</strong></td>
-    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · RxJS BehaviorSubject · React Context / Hooks</td>
+    <td>NgRx · NgRx Signal Store · Akita · Angular Signals · React Context / Hooks</td>
   </tr>
   <tr>
     <td><strong>Component Libraries</strong></td>
-    <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize · React ecosystem (Hooks, component patterns)</td>
+    <td>Angular Material · PrimeNG · Bento NG · Saffron · Materialize</td>
   </tr>
   <tr>
     <td><strong>Architecture</strong></td>
-    <td>Clean Architecture · DDD · CQRS · Hexagonal · Micro Frontends · Design Tokens · PWA · Offline-First · i18n / l10n</td>
+    <td>Clean Architecture · DDD · CQRS · Hexagonal Architecture · SOLID · Micro Frontends · Design Systems · Design Tokens · PWA · Offline-First · Service Workers · Reactive Programming</td>
   </tr>
   <tr>
-    <td><strong>Testing & Quality</strong></td>
+    <td><strong>Testing &amp; Quality</strong></td>
     <td>Jest · Jasmine · Karma · Cypress · Playwright · ESLint · SonarQube · Automated Quality Gates</td>
   </tr>
   <tr>
-    <td><strong>AI & Productivity</strong></td>
-    <td>GitHub Copilot · AI Agents · Prompt Engineering · AI-Assisted Code Review · Generative AI Workflows</td>
+    <td><strong>APIs &amp; Data</strong></td>
+    <td>Node.js · GraphQL · REST APIs · Firebase / Firestore · IndexedDB (Dexie) · Google Maps / Places</td>
   </tr>
   <tr>
-    <td><strong>APIs & Data</strong></td>
-    <td>GraphQL · REST APIs · Firebase / Firestore · IndexedDB (Dexie) · Google Maps / Places</td>
-  </tr>
-  <tr>
-    <td><strong>Cloud & DevOps</strong></td>
-    <td>Firebase · AWS (S3, CloudFront) · Docker · Nginx · GitHub Actions · GitLab CI · Azure DevOps</td>
+    <td><strong>Cloud &amp; DevOps</strong></td>
+    <td>Firebase · AWS (S3, CloudFront) · Docker · Nginx · CI/CD · GitHub Actions · GitLab CI · Azure DevOps</td>
   </tr>
   <tr>
     <td><strong>Tools</strong></td>
-    <td>Git · Nx · Jira · Confluence · Figma · Storybook · Postman · TFS</td>
+    <td>Git · Nx · Jira · Confluence · Figma · Storybook · Postman · Node-RED · TFS</td>
   </tr>
   <tr>
-    <td><strong>Methodologies</strong></td>
-    <td>Agile · Scrum · Code Review Culture · Conventional Commits · ADRs · Docs as Code</td>
+    <td><strong>AI &amp; Productivity</strong></td>
+    <td>GitHub Copilot · AI Agents · Prompt Engineering · AI-Assisted Code Review · Generative AI Workflows</td>
+  </tr>
+  <tr>
+    <td><strong>Leadership &amp; Process</strong></td>
+    <td>Technical Leadership · Mentoring · Code Review Culture · PR Standards · Agile · Scrum · Sprint Planning · Internationalization (i18n, l10n) · Strategic Planning · Multidisciplinary Team Coordination · Prototyping · UI/UX Design · Conventional Commits · ADRs · Docs as Code</td>
   </tr>
 </table>
+<!-- /cv:stack -->
 
 ---
 
 ## Experience Timeline
 
-| Period                | Role                                   | Company                                 |
-| --------------------- | -------------------------------------- | --------------------------------------- |
-| Oct 2021 to Present   | Frontend Consultant & Technical Leader | **Ilegra** (Remote)                     |
-| Apr 2021 to Oct 2021  | Frontend Architect & Consultant        | **Icon Solutions Brasil** (Remote)      |
-| Oct 2017 to Mar 2021  | Senior Frontend Developer & Specialist | **Stefanini Labs** (Campina Grande, PB) |
-| Mar 2017 to Oct 2017  | Frontend Developer (Web & Mobile)      | **LTI Unifacisa** (Campina Grande, PB)  |
+<!-- cv:experience -->
+| Period | Role | Company |
+| --- | --- | --- |
+| 10/2021 - Present | Frontend Consultant & Technical Leader | **Ilegra** · Campina Grande, PB (Remote) |
+| 04/2021 - 10/2021 | Frontend Architect & Consultant | **Icon Solutions Brasil** · Remote |
+| 10/2017 - 03/2024 | Senior Frontend Developer & Specialist | **Stefanini Labs** · Campina Grande, PB |
+| 03/2017 - 10/2017 | Web & Mobile Frontend Developer | **LTI Unifacisa** · Campina Grande, PB |
+<!-- /cv:experience -->
 
 ---
 
 ## 🌟 Featured Projects
 
-| Project                                                   | Description                                                                                                    | Stack                                     |
-| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [**Interactive CV**](https://victor-medeiros-cv.web.app/) | Trilingual (EN/PT/ES) portfolio with dark mode, font controls, PDF/DOC export, PWA, offline support and JSON-LD SEO | Angular 19 · TypeScript · Firebase · i18n |
+| Project | Description | Stack |
+| --- | --- | --- |
+| [**Interactive CV**](https://victor-medeiros-cv.web.app/) | Trilingual CV (EN/PT/ES) with ATS-friendly PDF and DOCX generated in the browser, dark mode and font controls | JavaScript · HTML · CSS · Firebase Hosting · GitHub Actions |
+| [**Interview Prep**](https://front-prep.web.app/) | Interview guide for Frontend and Tech Lead roles: Angular, React and Backend tracks with progress tracking, search and reading mode | JavaScript · Markdown · Service Worker · Firebase Hosting |
+| [**Judô Master**](https://vmedeiros.github.io/Judo-Master/) | Study and manage judo techniques by belt, with filters, editing and persistent themes | Angular 21 · Signals · TypeScript · GitHub Pages |
 
 ---
 
@@ -142,23 +152,29 @@ I've delivered for **Thomson Reuters**, **Accenture/C6 Bank** and **Qodeture**: 
 
 ## Languages
 
-| 🇧🇷 Portuguese | 🇺🇸 English | 🇪🇸 Spanish |
-| :-----------: | :--------: | :--------: |
-|    Native     |   Fluent   |   Fluent   |
+<!-- cv:languages -->
+| Portuguese | English | Spanish |
+| :-: | :-: | :-: |
+| Native | Fluent | Fluent |
+<!-- /cv:languages -->
 
 ---
 
 ## Education
 
-- **Post-Graduation** in Mobile Device Development, Unifacisa (2018)
-- **Bachelor's Degree** in Information Systems, Unifacisa (2017)
+<!-- cv:education -->
+- **Postgraduate Degree in Mobile Device Development**, Unifacisa | Campina Grande, PB | 2018
+- **Bachelor's Degree in Information Systems**, Unifacisa | Campina Grande, PB | 2017
+<!-- /cv:education -->
 
 ---
 
 ## Certifications & Continuous Learning
 
+<!-- cv:certifications -->
 - **Angular University:** Angular Signals In Depth (Angular 19), RxJS In Practice, Reactive Angular Course (Angular 16), Angular Advanced MasterClass
 - **Udemy:** ChatGPT Masterclass
+<!-- /cv:certifications -->
 - **Ongoing:** AI-Powered Development & Prompt Engineering
 
 ---
