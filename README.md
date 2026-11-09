@@ -41,11 +41,9 @@ Frontend Tech Lead with **9+ years** of experience building enterprise web and m
 
 <!-- cv:achievements -->
 - Reduced production defects at **Thomson Reuters** with improvements focused on internationalization
-- Built **Design Token system** adopted by other squads, reducing UI inconsistencies by 60%
 - Decreased release cycle from **monthly to weekly** via CI/CD automation
 - Mentored **12+ developers**, with several promoted to senior in a short period
 - Delivered **trilingual platforms** (EN/ES/PT) for 3 enterprise clients in CRM, LegalTech & FinTech
-- Brought **AI Agents & GitHub Copilot** into the team's workflow, raising productivity by about 30%
 <!-- /cv:achievements -->
 
 ---
@@ -56,7 +54,7 @@ Frontend Tech Lead with **9+ years** of experience building enterprise web and m
 <table>
   <tr>
     <td><strong>Frontend</strong></td>
-    <td>Angular · Ionic · Capacitor · React · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
+    <td>Angular · Ionic · Capacitor · React · Next.js · TypeScript · JavaScript · RxJS · HTML5 · CSS3 · SCSS · Tailwind CSS</td>
   </tr>
   <tr>
     <td><strong>State Management</strong></td>
