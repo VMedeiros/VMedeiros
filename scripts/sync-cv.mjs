@@ -89,6 +89,18 @@ const sections = {
     });
     return ["| Period | Role | Company |", "| --- | --- | --- |", ...rows].join("\n");
   },
+  projects: () => {
+    const rows = [];
+    blocks.forEach((block, i) => {
+      if (block.kind !== "project") return;
+      const link = block.location.find((s) => s.link)?.link;
+      const stack = plain(block.location).split("|").map((s) => s.trim()).filter(Boolean).at(-1) ?? "";
+      const description = blocks[i + 1]?.kind === "description" ? markdown(blocks[i + 1].text) : "";
+      const name = `**${cell(block.company)}**`;
+      rows.push(`| ${link ? `[${name}](${link})` : name} | ${cell(description)} | ${cell(items(stack).join(" · "))} |`);
+    });
+    return ["| Project | Description | Stack |", "| --- | --- | --- |", ...rows].join("\n");
+  },
   languages: () => {
     const langs = ofKind("language");
     return [
