@@ -115,15 +115,10 @@ Frontend Tech Lead with **9+ years** of experience building enterprise web and m
 <!-- cv:projects -->
 | Project | Description | Stack |
 | --- | --- | --- |
-| [**FinSmart AI**](https://finsmart-ai-236747414590.us-west1.run.app/) | Personal finance PWA with a multilingual AI advisor: natural-language entries, receipt reading from photos and investment suggestions. | Angular 21 · Gemini · D3.js · Tailwind CSS · PWA |
 | [**JudoKan**](https://judokan-app.web.app/) | Management system for judo academies: students, belts, classes, attendance and payments, with admin, instructor and student roles (in development). | Angular 21 · Firebase · Tailwind CSS · Playwright |
 | [**Nexus Enterprise**](https://nexus-enterprise-time.web.app/) | Operations platform that tracks worked hours against contracts, warns before a budget runs out and controls access by role (in development). | Angular 19 · Signals · Tailwind CSS · Chart.js · Firebase · PWA |
 | [**Judô Master**](https://vmedeiros.github.io/Judo-Master/) | Angular app to study and manage judo techniques by belt, with filtering, editing and persistent light and dark themes. | Angular 21 · Signals · Tailwind CSS |
 | [**Holy Bible**](https://holy-bible-ai.web.app/) | Bible study app with several versions and languages, bookmarks and AI analysis of each verse's context, with Google sign-in and sync. | Next.js · Genkit · Gemini · Firebase · Tailwind CSS |
-| [**AI Portfolio Pro**](https://local-personal-projects.web.app/132iaWrzuJb6TeCAQKTV0d3UGiS2) | Platform to build and publish developer portfolios, with AI help to write and summarize projects. My portfolio runs on it. | Next.js 15 · Genkit · Gemini · Firestore · Tailwind CSS · shadcn/ui |
-| [**Plotly 3D Converter**](https://studio--studio-5317256297-84121.us-central1.hosted.app/) | Upload, customize and preview 3D models (.obj, .html) and generate embeddable HTML, with cloud storage on Firebase. | Next.js 15 · Plotly · Firebase · Tailwind CSS |
-| [**Optimal Trainer**](https://studio--studio-872593168-6907d.us-central1.hosted.app/) | Fitness and nutrition coach that uses generative AI to create workout and meal plans for each user's profile and goals (in development). | Next.js 15 · Genkit · Gemini · Firebase · Framer Motion |
-| [**CryptoWise**](https://studio--studio-5697503725-469fe.us-central1.hosted.app/) | Tracker for selected cryptocurrencies with AI-generated insights and recommendations (in testing). | Next.js · LLM · Firebase |
 <!-- /cv:projects -->
 
 Also: the [Interactive CV](https://victor-medeiros-cv.web.app/) itself (trilingual, with ATS-friendly PDF and DOCX generated in the browser) and [Interview Prep](https://front-prep.web.app/), an interview guide for Frontend and Tech Lead roles.
